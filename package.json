@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Demo App with Routing built-in (recommended)",
+  "name": "qwik-bun-build-issue",
+  "description": "Reproduction for Qwik City App build issue when using Bun",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -10,19 +10,18 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "qwik build",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.types": "tsc --incremental --noEmit",
+    "build": "bun run --bun qwik build",
+    "build.client": "bun run --bun vite build",
+    "build.preview": "bun run --bun vite build --ssr src/entry.preview.tsx",
+    "build.types": "bun run --bun tsc --incremental --noEmit",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
-    "dev": "vite --mode ssr",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "dev": "bun run --bun vite --mode ssr",
+    "dev.debug": "bun --inspect ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
-    "preview": "qwik build preview && vite preview --open",
-    "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "preview": "bun run --bun qwik build preview && bun run --bun vite preview --open",
+    "start": "bun run --bun vite --open --mode ssr"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.4.5",
