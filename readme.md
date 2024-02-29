@@ -4,7 +4,7 @@ Reproduction for Qwik City App build issue when using Bun
 
 ## Reproduction
 
-1. Clone this repository
+1. Clone this repository via `git clone git@github.com:octet-stream/qwik-bun-build-issue.git`
 2. Install dependencis via `bun i`
 3. Run `bun run build` and the build process with fail with the following error:
 
