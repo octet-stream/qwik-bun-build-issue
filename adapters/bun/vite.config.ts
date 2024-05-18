@@ -15,7 +15,12 @@ export default extendConfig(baseConfig, () => {
       minify: false,
     },
     plugins: [
-      bunServerAdapter(),
+      bunServerAdapter({
+        ssg: {
+          origin: "qwik.dev",
+          include: ["/*"]
+        }
+      }),
     ],
   };
 });
